@@ -1,0 +1,365 @@
+.order__wrapper {
+  background-image: url('../../images/order-bg.svg');
+  background-color: $color-bg-order;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
+
+.order {
+  @include container;
+  @include fonts;
+  padding: 121px 0 151px 0;
+  color: $color-white;
+  text-align: center;
+
+  @media (max-width: $bp-desktop) {
+    padding: 50px 0;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 36px;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+
+  &__subtitle {
+    margin-bottom: 80px;
+    font-size: 18px;
+    line-height: 1.3;
+    color: #BBBBBB;
+
+    @media (max-width: $bp-desktop) {
+      margin: 15px 5px;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $bp-desktop) {
+      flex-direction: column;
+      width: 90%;
+      gap: 30px;
+    }
+  }
+
+  &__progress__wrapper {
+    width: 66.6%;
+
+    @media (max-width: $bp-desktop) {
+      width: 100%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  &__output {
+    font-weight: 600;
+
+    @media (max-width: $bp-desktop) {
+      width: 70px;
+    }
+  }
+
+  &__steps {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 80px;
+    position: relative;
+
+    .order__steps-item {
+      width: 189px;
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .order__step {
+      height: 6px;
+      position: absolute;
+      left: 168px;
+      top: 47px;
+
+      @media (max-width: $bp-desktop) {
+        display: none;
+      }
+    }
+
+    .step2 {
+      left: 408px;
+    }
+
+    .step3 {
+      left: 648px;
+    }
+
+    .step4 {
+      left: 888px;
+    }
+
+
+    @media (max-width: $bp-desktop) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @media (max-width: $bp-tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__form {
+    @include flex-center;
+    @include fonts;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: inherit;
+
+    .order__select,
+    .order__input,
+    .order__file {
+      padding: 12px 10px;
+      border-radius: 3px;
+      border: none;
+      font-size: 18px;
+      color: #272733;
+      flex: 1;
+
+      @media (max-width: $bp-desktop) {
+        flex: none;
+        width: 90%;
+      }
+    }
+
+    .order__select {
+      appearance: none;
+      background-image: url("../../images/arrow.svg");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+    }
+
+    .order__progress {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 8px;
+      background: #fff;
+      border-radius: 4px;
+      outline: none;
+
+      &::-webkit-slider-runnable-track {
+        height: 10px;
+        background: #fff;
+        border-radius: 5px;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        border: 5px solid #286690;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin-top: -7px;
+      }
+    }
+
+    .order__submit {
+      background: $color-primary;
+      color: $color-white;
+      border: none;
+      padding: 17px 125px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 20px;
+      width: 370px;
+      font-weight: 600;
+      font-size: 15px;
+      text-transform: uppercase;
+
+      &:hover {
+        background: darken($color-primary, 10%);
+      }
+
+      @media (max-width: $bp-desktop) {
+        width: 300px;
+        padding: 15px 50px;
+      }
+    }
+
+    @media (max-width: $bp-tablet) {
+      flex-direction: row;
+    }
+
+    @media (max-width: $bp-desktop) {
+      flex-direction: column;
+    }
+
+
+  }
+
+  &__file {
+    width: 370px;
+    background: #FFFFFF;
+    flex: auto;
+  }
+
+  .file-img {
+    margin-right: 10px;
+  }
+
+  .file-upload {
+    position: relative;
+    text-wrap: nowrap;
+  }
+
+  .file-upload input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .file-upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    padding: 12px 96px;
+    @include fonts;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+
+    @media (max-width: $bp-desktop) {
+      width: 100%;
+      gap: 30px;
+    }
+  }
+
+  .file-upload-label svg {
+    margin-right: 10px;
+  }
+
+
+}
+
+.custom-select {
+  position: relative;
+  width: 370px;
+  height: 48px;
+  background: #ffffffd9;
+  border: 1px solid #000;
+  border-radius: 3px;
+  @include fonts;
+  color: #000;
+  cursor: pointer;
+
+  &__trigger {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    font-size: 18px;
+  }
+
+  .arrow {
+    width: 20px;
+    height: 20px;
+    background: url("../../images/arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s;
+  }
+
+  &.open .custom-select__trigger {
+    background: #3D4050D9;
+    color: $color-white;
+  }
+
+  &.open .arrow {
+    transform: rotate(180deg);
+  }
+
+  .custom-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 198px;
+    overflow-y: auto;
+    background: #272733E5;
+    border: 1px solid #3D4050;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 10;
+    flex-direction: column;
+    color: $color-white;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #3D4050;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-primary;
+      border-radius: 3px;
+    }
+
+    scrollbar-width: 7px;
+    scrollbar-color: $color-primary #3D4050;
+
+    .custom-option {
+      display: flex;
+      justify-items: flex-start;
+      margin-left: 10px;
+      @include fonts;
+      font-size: 18px;
+      line-height: 34px;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  &.open .custom-options {
+    display: block;
+  }
+
+  @media (max-width: $bp-desktop) {
+    flex: none;
+    width: 90%;
+  }
+}

@@ -1,0 +1,65 @@
+.footer {
+  background: $color-bg-footer;
+  color: $color-white;
+  height: 80px;
+  text-wrap: nowrap;
+  @media (max-width: $bp-desktop) {
+    height: 100px;
+  }
+
+  &--image {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    @media (max-width: $bp-tablet) {
+      gap: 5px;
+    }
+  }
+
+  &__wrapper {
+    @include container;
+    @include fonts;
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    justify-content: space-between;
+    @media (max-width: $bp-desktop) {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+
+  &__payments {
+    display: flex;
+    gap: 38px;
+    margin: 0 40px;
+
+    &::before,
+    &::after {
+      content: "|";
+      @media (max-width: $bp-desktop) {
+        content: none;
+      }
+    }
+    @media (max-width: $bp-mobile) {
+        gap: 5px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 38px;
+
+    a {
+      color: $color-primary;
+      text-decoration: none;
+      margin: 0 5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

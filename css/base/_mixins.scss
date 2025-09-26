@@ -1,0 +1,15 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  max-width: 1172px;
+  margin: 0 auto;
+}
+
+@mixin fonts {
+  font-family: $font-main;
+  font-weight: 400;
+}

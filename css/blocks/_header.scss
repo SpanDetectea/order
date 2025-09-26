@@ -1,0 +1,81 @@
+@import "../base/_variables";
+
+.wrapper {
+  background: url('../../images/mans.png') center;
+   @media (max-width: $bp-tablet) {
+    background-size: cover;
+  }
+}
+
+.selection {
+  color: $color-primary;
+}
+
+.header__wrapper {
+  background: $color-bg-dark;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include container;
+
+  &__logo {
+    font-family: "Raleway", sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: $color-white;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 60px;
+  }
+
+  &__link {
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  @media (max-width: $bp-desktop) {
+    font-size: 0.8em;
+    &__nav {
+      gap: 10px;
+      margin-right: 10px;
+    }
+
+    &__logo {
+      margin-left: 10px;
+    }
+  }
+
+  @media (max-width: $bp-tablet) {
+    &__nav {
+      gap: 5px;
+      margin-right: 10px;
+      .header__link {
+        font-size: 0.7em;
+      }
+    }
+
+    &__logo {
+      margin-left: 10px;
+      font-size: 0.7em;
+    }
+  }
+}
