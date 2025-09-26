@@ -14,7 +14,7 @@ body {
 }
 
 .wrapper {
-  background: url("../images/mans.png") center;
+  background: url("..//order/images/mans.png") center;
 }
 @media (max-width: 800px) {
   .wrapper {
@@ -181,7 +181,7 @@ body {
 }
 
 .order__wrapper {
-  background-image: url("../images/order-bg.svg");
+  background-image: url("..//order/images/order-bg.svg");
   background-color: #272733;
   background-blend-mode: multiply;
   background-size: cover;
@@ -334,7 +334,7 @@ body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background-image: url("images/arrow.svg");
+  background-image: url("/order/images/arrow.svg");
   background-repeat: no-repeat;
   background-position: right 10px center;
 }
@@ -465,7 +465,7 @@ body {
 .custom-select .arrow {
   width: 20px;
   height: 20px;
-  background: url("../images/arrow.svg");
+  background: url("..//order/images/arrow.svg");
   background-size: contain;
   background-repeat: no-repeat;
   transition: transform 0.3s;

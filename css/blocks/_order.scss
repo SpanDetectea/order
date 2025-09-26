@@ -1,5 +1,5 @@
 .order__wrapper {
-  background-image: url('../images/order-bg.svg');
+  background-image: url('..//order/images/order-bg.svg');
   background-color: $color-bg-order;
   background-blend-mode: multiply;
   background-size: cover;
@@ -148,7 +148,7 @@
 
     .order__select {
       appearance: none;
-      background-image: url("images/arrow.svg");
+      background-image: url("/order/images/arrow.svg");
       background-repeat: no-repeat;
       background-position: right 10px center;
     }
@@ -292,7 +292,7 @@
   .arrow {
     width: 20px;
     height: 20px;
-    background: url("../images/arrow.svg");
+    background: url("..//order/images/arrow.svg");
     background-size: contain;
     background-repeat: no-repeat;
     transition: transform 0.3s;
