@@ -1,7 +1,7 @@
 @import "../base/_variables";
 
 .wrapper {
-  background: url('..//order/images/mans.png') center;
+  background: url('/order/images/mans.png') center;
    @media (max-width: $bp-tablet) {
     background-size: cover;
   }
